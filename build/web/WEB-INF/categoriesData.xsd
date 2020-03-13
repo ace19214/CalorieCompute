@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<xs:schema version="1.0"
+           targetNamespace="http://calorie.compute"
+           xmlns="http://calorie.compute"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    
+    <xs:element name="categories" type="listCategories"/>
+    <xs:complexType name="listCategories">
+        <xs:sequence>
+            <xs:element name="categoryItem" type="category" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="category">
+        <xs:sequence>
+            <xs:element name="brand" type="xs:string"/>
+            <xs:element name="title" type="xs:string"/>
+            <xs:element name="caregoryTitle" type="xs:string"/>
+            <xs:element name="urlDetail" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

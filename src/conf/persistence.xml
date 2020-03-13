@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="CalorieComputePU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>duydd.entity.Brand</class>
+    <class>duydd.entity.Categories</class>
+    <class>duydd.entity.Sysdiagrams</class>
+    <class>duydd.entity.NutriDetail</class>
+    <class>duydd.entity.Title</class>
+    <class>duydd.entity.BrandTitle</class>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://localhost\DUYDDSE62881\SQLEXPRESS:1433;databaseName=Calories_Compute"/>
+      <property name="javax.persistence.jdbc.user" value="duydd"/>
+      <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+      <property name="javax.persistence.jdbc.password" value="sunshinealone"/>
+    </properties>
+  </persistence-unit>
+</persistence>
